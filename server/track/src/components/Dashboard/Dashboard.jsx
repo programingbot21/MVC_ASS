@@ -6,6 +6,7 @@ import { AiFillBell } from "react-icons/ai";
 import { HiSpeakerphone } from "react-icons/hi";
 import { AiFillThunderbolt } from "react-icons/ai";
 import Dashboard1 from './Dashboard1';
+import { Link } from 'react-router-dom';
 
 
 
@@ -30,22 +31,28 @@ const Dashboard = () => {
  
           {open && "Campaigns"}
           </li>
+          <Link to='/custtomer'>
           <li className="flex items-center gap-2 p-3 hover:bg-blue-700 rounded cursor-pointer">
             <FaUserFriends /> {open && "Customers"}
           </li>
+          </Link>
           <li className="flex items-center gap-2 p-3 hover:bg-blue-700 rounded cursor-pointer">
           <AiFillBell />{open && "Follow Ups"}
           </li>
+          <Link to='/inte'>
           <li className="flex items-center gap-2 p-3 hover:bg-blue-700 rounded cursor-pointer">
           <AiFillThunderbolt />
+
           {open && "Integrations"}
           </li>
+          </Link>
           <li className="flex items-center gap-2 p-3 hover:bg-blue-700 rounded cursor-pointer">
             <FaCog /> {open && "Settings"}
           </li>
+          <Link to="/chatAi" >
           <li className="flex items-center gap-2 p-3 hover:bg-blue-700 rounded cursor-pointer">
           <Bot /> {open && "AI Suggestions"}
-          </li>
+          </li></Link>
           {/* <li className="flex items-center gap-2 p-3 hover:bg-blue-700 rounded cursor-pointer">
             <Logout/>
           </li> */}

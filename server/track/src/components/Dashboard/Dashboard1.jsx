@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaUserFriends, FaPercentage, FaDollarSign, FaChartLine } from "react-icons/fa";
 import { Bell, UserCircle } from "lucide-react";
+import ChatAi from "../ChatAi/ChatAi";
 
 
 export default function Dashboard1() {
@@ -83,7 +84,7 @@ const StatCard = ({ icon, label, value, change, negative = false }) => {
 const AIAssistant = () => {
   return (
     <div className="fixed bottom-6 right-6 bg-white p-4 rounded-lg shadow-md w-80">
-      <div className="flex items-center space-x-2">
+      {/* <div className="flex items-center space-x-2">
         <span className="text-lg font-bold">Referral AI Assistant</span>
       </div>
       <p className="text-sm text-gray-600 mt-2">
@@ -96,7 +97,9 @@ const AIAssistant = () => {
         <button>Optimize strategy</button>
         <button>View metrics</button>
         
-      </div>
+      </div> */}
+
+      <ChatAi/>
     </div>
   );
 };

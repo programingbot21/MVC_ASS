@@ -10,6 +10,10 @@ import Layout from './Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import Dashboard from './components/Dashboard/Dashboard.jsx'
 import Logout from './components/Logout/Logout.jsx'
+import ChatAi from './components/ChatAi/ChatAi.jsx'
+import Inte from './components/inte/Inte.jsx'
+import Custtomer from './components/custumer/Custtomer.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -36,7 +40,18 @@ const router = createBrowserRouter([
         path: 'logout',
         element: <Logout/>
       },
-      
+      {
+        path: 'chatAi',
+        element: <ChatAi/>
+      },
+      {
+        path: 'inte',
+        element: <Inte/>
+      },
+      {
+        path: 'custtomer',
+        element: <Custtomer/>
+      }
      
     ]
   }

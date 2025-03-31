@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import authRoutes from "./routes/auth.js"
+// import userRoutes from "./routes/userauth.js"
+import createAuthRoutes from "./routes/userauth.js"
 // import transactionRoutes from "./routes/auth.js";
 
 // import usersTransactionRoutes from "./routes/Createauth.js"
@@ -18,12 +20,12 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/auth", authRoutes);
-// app.use("/api/transactions", transactionRoutes);
 
 
 
-// users api
-// app.use("/api",usersTransactionRoutes)
+app.use("/api", createAuthRoutes );
+
+
 
 
 
@@ -36,6 +38,6 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
 
-app.listen(7000, () => {
+app.listen(7001, () => {
   console.log("Server running on port 7000");
 });
